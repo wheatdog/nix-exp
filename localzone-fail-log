@@ -1,0 +1,136 @@
+Sourcing python-recompile-bytecode-hook.sh
+Sourcing python-remove-tests-dir-hook
+Sourcing python-catch-conflicts-hook.sh
+Sourcing python-remove-bin-bytecode-hook.sh
+Sourcing setuptools-build-hook
+Using setuptoolsBuildPhase
+Using setuptoolsShellHook
+Sourcing pip-install-hook
+Using pipInstallPhase
+Sourcing python-imports-check-hook.sh
+Using pythonImportsCheckPhase
+Sourcing python-namespaces-hook
+Sourcing setuptools-check-hook
+@nix { "action": "setPhase", "phase": "unpackPhase" }
+unpacking sources
+unpacking source archive /nix/store/y46bi738qf0y1fdfxx7jrz62j4fjixi3-source
+source root is source
+setting SOURCE_DATE_EPOCH to timestamp 315619200 of file source/tox.ini
+@nix { "action": "setPhase", "phase": "patchPhase" }
+patching sources
+@nix { "action": "setPhase", "phase": "configurePhase" }
+configuring
+no configure script, doing nothing
+@nix { "action": "setPhase", "phase": "buildPhase" }
+building
+Executing setuptoolsBuildPhase
+running bdist_wheel
+running build
+running build_py
+creating build
+creating build/lib
+creating build/lib/localzone
+copying localzone/__init__.py -> build/lib/localzone
+copying localzone/__version__.py -> build/lib/localzone
+copying localzone/context.py -> build/lib/localzone
+copying localzone/models.py -> build/lib/localzone
+copying localzone/util.py -> build/lib/localzone
+running egg_info
+creating localzone.egg-info
+writing localzone.egg-info/PKG-INFO
+writing dependency_links to localzone.egg-info/dependency_links.txt
+writing requirements to localzone.egg-info/requires.txt
+writing top-level names to localzone.egg-info/top_level.txt
+writing manifest file 'localzone.egg-info/SOURCES.txt'
+reading manifest file 'localzone.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'localzone.egg-info/SOURCES.txt'
+installing to build/bdist.linux-x86_64/wheel
+running install
+running install_lib
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/wheel
+creating build/bdist.linux-x86_64/wheel/localzone
+copying build/lib/localzone/__init__.py -> build/bdist.linux-x86_64/wheel/localzone
+copying build/lib/localzone/__version__.py -> build/bdist.linux-x86_64/wheel/localzone
+copying build/lib/localzone/context.py -> build/bdist.linux-x86_64/wheel/localzone
+copying build/lib/localzone/models.py -> build/bdist.linux-x86_64/wheel/localzone
+copying build/lib/localzone/util.py -> build/bdist.linux-x86_64/wheel/localzone
+running install_egg_info
+Copying localzone.egg-info to build/bdist.linux-x86_64/wheel/localzone-0.9.6-py3.8.egg-info
+running install_scripts
+adding license file "LICENSE" (matched pattern "LICEN[CS]E*")
+creating build/bdist.linux-x86_64/wheel/localzone-0.9.6.dist-info/WHEEL
+creating 'dist/localzone-0.9.6-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+adding 'localzone/__init__.py'
+adding 'localzone/__version__.py'
+adding 'localzone/context.py'
+adding 'localzone/models.py'
+adding 'localzone/util.py'
+adding 'localzone-0.9.6.dist-info/LICENSE'
+adding 'localzone-0.9.6.dist-info/METADATA'
+adding 'localzone-0.9.6.dist-info/WHEEL'
+adding 'localzone-0.9.6.dist-info/top_level.txt'
+adding 'localzone-0.9.6.dist-info/RECORD'
+removing build/bdist.linux-x86_64/wheel
+Finished executing setuptoolsBuildPhase
+@nix { "action": "setPhase", "phase": "installPhase" }
+installing
+Executing pipInstallPhase
+/build/source/dist /build/source
+Processing ./localzone-0.9.6-py3-none-any.whl
+Requirement already satisfied: dnspython in /nix/store/wl07qis4ii65iw94pi3wxinz6kikrvg0-python3.8-dnspython-2.0.0/lib/python3.8/site-packages (from localzone==0.9.6) (2.0.0)
+Installing collected packages: localzone
+Successfully installed localzone-0.9.6
+/build/source
+Finished executing pipInstallPhase
+@nix { "action": "setPhase", "phase": "fixupPhase" }
+post-installation fixup
+shrinking RPATHs of ELF executables and libraries in /nix/store/fplgj5kzqwwmy774kmak95w4wh950iw7-python3.8-localzone-0.9.6
+strip is /nix/store/p792j5f44l3f0xi7ai5jllwnxqwnka88-binutils-2.31.1/bin/strip
+stripping (with command strip and flags -S) in /nix/store/fplgj5kzqwwmy774kmak95w4wh950iw7-python3.8-localzone-0.9.6/lib 
+patching script interpreter paths in /nix/store/fplgj5kzqwwmy774kmak95w4wh950iw7-python3.8-localzone-0.9.6
+checking for references to /build/ in /nix/store/fplgj5kzqwwmy774kmak95w4wh950iw7-python3.8-localzone-0.9.6...
+Executing pythonRemoveTestsDir
+Finished executing pythonRemoveTestsDir
+@nix { "action": "setPhase", "phase": "installCheckPhase" }
+running install tests
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.8.5, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: /build/source
+[1mcollecting ... [0m[1mcollected 22 items                                                             [0m
+
+tests/test_context.py [32m.[0m[32m.[0m[32m.[0m[32m                                                [ 13%][0m
+tests/test_models.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[31m                                     [ 81%][0m
+tests/test_util.py [32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m                                                  [100%][0m
+
+=================================== FAILURES ===================================
+[31m[1m________________________________ test_zone_save ________________________________[0m
+
+    [94mdef[39;49;00m [92mtest_zone_save[39;49;00m():
+        savefile = [33m"[39;49;00m[33mtests/db.example.com.saved[39;49;00m[33m"[39;49;00m
+        z = localzone.load(ZONEFILE, ORIGIN)
+        serial = z.soa.rdata.serial
+        record = z.update_record(HASHID, [33m"[39;49;00m[33m192.0.2.100[39;49;00m[33m"[39;49;00m)
+>       z.save(savefile)
+
+[1m[31mtests/test_models.py[0m:118: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31mlocalzone/models.py[0m:71: in save
+    [96mself[39;49;00m._increment_serial()
+[1m[31mlocalzone/models.py[0m:52: in _increment_serial
+    [96mself[39;49;00m.soa.rdata.serial = next_serial
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <DNS IN SOA rdata: ns username 2007120710 86400 7200 2419200 3600>
+name = 'serial', value = 2020100300
+
+    [94mdef[39;49;00m [92m__setattr__[39;49;00m([96mself[39;49;00m, name, value):
+        [90m# Rdatas are immutable[39;49;00m
+>       [94mraise[39;49;00m [96mTypeError[39;49;00m([33m"[39;49;00m[33mobject doesn[39;49;00m[33m'[39;49;00m[33mt support attribute assignment[39;49;00m[33m"[39;49;00m)
+[1m[31mE       TypeError: object doesn't support attribute assignment[0m
+
+[1m[31m/nix/store/wl07qis4ii65iw94pi3wxinz6kikrvg0-python3.8-dnspython-2.0.0/lib/python3.8/site-packages/dns/rdata.py[0m:129: TypeError
+=========================== short test summary info ============================
+FAILED tests/test_models.py::test_zone_save - TypeError: object doesn't suppo...
+[31m========================= [31m[1m1 failed[0m, [32m21 passed[0m[31m in 0.41s[0m[31m =========================[0m
